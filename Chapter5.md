@@ -22,3 +22,34 @@ $g(\lambda,\nu) \leq p^* $
 
  函数$f:R^n \rightarrow R$ 的共轭函数$f^*$ 为： $f^* (y) = \sup\limits_{x \in \mathbf{dom}f} (y^Tx - f(x)) $ 
 
+对于范数问题，$f_0 = || \cdot ||$其共轭函数的定义是：
+$$
+f_0^*(y) = \begin{cases}  0, &||y|| \leq 1  \\ \infty  &其他情况 \end{cases}
+$$
+
+##### Lagrange对偶问题
+
+对于任意一组$(\lambda , \nu) $ ，Lagrange对偶函数给出优化问题的最优值$p^*$ ，现在需要的时候关于参数$\lambda,\nu$ 相关的一个下界的最好下界
+
+可以表示为优化问题：
+$$
+\begin{align}   &maximaize   &g(\lambda,\nu)  \\ &subject \quad to  & \lambda \succeq 0    \end{align}
+$$
+上述问题是Lagrange对偶问题。
+
+**显式表达对偶约束**
+
+对偶函数的定义域:
+$$
+\mathbf{dom}   g = \{  (\lambda,\nu) | g(\lambda,\nu) >  - \infty \}
+$$
+一般的维数在m+p之上。标准形式的线性规划问题：
+$$
+\begin{align} & minimize  &c&^Tx \\ & subject \quad to &A&x=b \\  &&x& \succeq 0\end{align}
+$$
+其Lagrange对偶函数为：
+$$
+g(\lambda ,\nu) = \begin{cases}  -b^T\nu & A^T\nu - \lambda +c = 0 \\ - \infty & 其他情况 \end{cases} 
+$$
+其中应该要满足$\lambda \succeq 0$
+

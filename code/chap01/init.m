@@ -1,0 +1,10 @@
+x=-1:0.1:1;
+y=-1:0.1:1;
+[X Y]=meshgrid(x,y);
+load Z.txt;
+xi=-1:0.01:1;
+yi=-1:0.01:1;
+[XI YI]=meshgrid(xi,yi);
+ZI=interp2(X,Y,Z,XI,YI,'spline');
+contour(XI,YI,ZI,40);
+hold on;
